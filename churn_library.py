@@ -286,7 +286,7 @@ def train_models(x_train, x_test, y_train, y_test):
 
     df = import_data('data/bank_data.csv')
     x = encoder_helper(df, cat_columns, 'response')
-    #save feature importance
+#     #save feature importance
     feature_importance_plot(cv_rfc, x, 'images/results/feature_importance.png')
 
 
@@ -314,5 +314,5 @@ if __name__ == "__main__":
     # use perform_feature_engineering(df, response)
     x_train, x_test, y_train, y_test = perform_feature_engineering(x, y)
 
-    # train models
+    # train_models
     train_models(x_train, x_test, y_train, y_test)
